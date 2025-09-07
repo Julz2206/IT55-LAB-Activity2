@@ -1,0 +1,350 @@
+
+/* Importing Google Fonts for typography */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* 2.1 - Advanced Selectors and Page Structure */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height: 1.75;
+    color: #556070;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2.2rem 4.4vw 3.5rem);
+    text-transform: none;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+p {
+    font-size: clamp(1rem, 1.2vw, 1.05rem);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #6B4CCF;
+    position: relative;
+    transition: all 0.35s ease;
+    text-align: center;
+}
+a:hover{
+    color: #8d5cf6
+}
+a[class^="btn-"]{
+    font-weight:700;
+}
+
+#site-header {
+    background: linear-gradient(90deg, #CDB4DB, #BDE0FE, #C8F7DC);
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+    backdrop-filter: blur(6px);
+}
+
+#site-footer {
+    background-color: #CDB4DB;
+    color: #353a4a;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 160px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #273043;
+    font-weight: 700;
+    padding: 0.1rem 1rem;
+    transition: all 0.35s ease;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 3px 10px rgba(15, 23, 42, .05);
+
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg #FFD6A5 #FFC6D3);
+    color: #fd9090;
+    border: 2px rgb(255, 84, 212);
+    padding: 10px;
+    border-radius: 25px 10px;
+}
+
+.articles > .article-card {
+    margin-bottom: 25px;
+}
+
+input[type="email"] {
+    border: 2px solid rgba(141, 92, 246, 0.35);
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 340px;
+    outline: none;
+    transition: all 0.35s ease;
+    background: #fff;
+}
+
+/* 2.2 - Colors, Backgrounds, and Layout Styling */
+.hero {
+    background: linear-gradient(120deg #BDE0FE #C8F7DC);
+    text-align: center;
+    padding: 1rem 6rem 1.5rem;
+    color: #354053;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    position:relative;
+    overflow: hidden;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px; 
+}
+
+header nav {
+    background-color: none;
+    padding: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 0.25rem;
+}
+
+.article-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 18px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08); 
+}
+
+.newsletter {
+    background-color: #fff8ff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: 26px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.newsletter button {
+    background-color: hsl(319, 100%, 87%);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.15rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .35s ease;
+}
+
+.newsletter button:hover {
+    background: linear-gradient(135deg, #a884f7, #ff78c9);
+    transform: translateY(-2px);
+}
+
+/* 2.3 - Typography & Text Effects */
+.hero h1 {
+    font-size: 2.4rem 5.2vw 4rem;
+    text-transform: none;
+    letter-spacing: 0.25px;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    font-style: normal;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    max-width: 70ch;
+    text-align: center;
+}
+
+.article-card h3::before {
+    content: "✦ ";
+    color: #f4a3ba;
+}
+
+.article-card h3 {
+    transition: all 0.35s ease;
+    font-weight: 800;
+    color: #354053;
+}
+
+.article-card:hover h3 {
+    color: #69c3fe;
+}
+
+.newsletter h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+}
+
+.newsletter h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    width:100%;
+    height: 10px;
+    background-color: rgba(164, 77, 236, 0.385);
+    border-radius: 50px;
+}
+
+/* 2.4 - Homepage Styling */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 1.25rem;
+}
+
+.article-card {
+    flex: 1 1 calc(33.333% - 1.25rem);
+    min-width: none;
+}
+
+/* 2.5 - Adding Images & Media Styling */
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+    transition: all 0.35s ease;
+}
+
+.article-card img:hover {
+    transform: scale(1.035);
+}
+
+.hero {
+    background-image: radial-gradient(80% 60% at 20% 20%, rgba(255,255,255, 0.45), transparent 60%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(40% 40% at 30% 30%, rgba(255,255,255, 0.45), transparent 70%);
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* 2.6 - Multi-Page Navigation (Articles Page) */
+.article-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px dashed rgba(15, 23, 42, .12);
+}
+
+.article-item img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+    transition: all 0.35s ease;
+}
+
+.article-item img:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.article-content {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0;
+    }
+
+    .article-card {
+        flex: 1 1 calc(50% - 1.25rem);
+    }
+
+    .article-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 130px;
+    }
+}
